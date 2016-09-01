@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@using System.Security.Claims;
+
+<div class="jumbotron">
+ 
+    @if (@ClaimsPrincipal.Current.Claims.Any())
+    {
+        <p>Welcome, @ViewBag.Name!</p>
+        <p><a href="/Home/Logout" class="btn btn-primary btn-lg">Logout</a></p>
+    }
+    else {
+        <p><a href="#" class="btn btn-primary btn-lg" onclick="window.signin();">Login</a></p>
+    }
+</div>
