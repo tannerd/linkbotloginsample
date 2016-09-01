@@ -52,7 +52,7 @@
     <script type="text/javascript">
         var lock = new Auth0Lock('@ConfigurationManager.AppSettings["auth0:ClientId"]', '@ConfigurationManager.AppSettings["auth0:Domain"]', {
             auth: {
-                redirectUrl: 'http://localhost:4987/LoginCallback.ashx'
+                redirectUrl: 'https://linkbot.azurewebsites.net/LoginCallback.ashx'
               , responseType: 'code'
               , params: {
                   scope: 'openid profile'
